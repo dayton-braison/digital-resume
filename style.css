@@ -1,0 +1,151 @@
+:root{
+    --mainTextColor: #000;
+    --mainBorderColor: #ccc;
+    --mainBgColor: #f8f8f8;
+    --mainLinkColor: rgb(0, 130, 222);
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5em;
+    box-sizing: border-box;
+    color: var(--mainTextColor);
+}
+
+body {
+    background-color: var(--mainBgColor);
+}
+
+h1 {
+    color: var(--mainLinkColor);
+    font-size: 3rem;
+}
+
+p, span, li {
+    color: var(--mainTextColor);
+    font-size: 1em;
+}
+
+a li {
+    color: var(--mainLinkColor);
+}
+
+.project--link {
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+.project--link:hover {
+    transform: scale(1.04);
+}
+
+a {
+    text-decoration: none;
+    color: var(--mainLinkColor);
+    font-weight: 600;
+}
+
+li {
+    line-height: 1.9em;
+    list-style: none;
+}
+
+#container--main {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.section--page {
+    padding: 1em 0;
+}
+
+#wrapper--hero {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+
+#bio {
+    font-weight: 300;
+}
+
+img {
+    border-radius: 50%;
+    width: 400px;
+    height: 225px;
+}
+
+#socials--list {
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 1em;
+    flex-wrap: wrap;
+}
+
+#socials--list a {
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+#socials--list a:hover {
+    transform: scale(1.07);
+}
+
+#wrapper--techstack__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    font-size: .9em;
+    font-weight: 500;
+}
+
+.card--techstack {
+    border: 1px solid var(--mainLinkColor);
+    padding: .5em 1em;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    body {
+        text-align: center;
+    }
+
+    #container--main {
+        flex-direction: column;
+    }
+    
+    #wrapper--hero {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    #bio {
+        max-width: 400px;
+    }
+
+    img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+
+    .section--page {
+        padding: 1em 0;
+    }
+
+    #socials--list {
+        gap: 1em;
+    }
+    
+    #socials--list, #wrapper--techstack__items {
+        flex-direction: column;
+    }
+
+    .card--techstack {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
